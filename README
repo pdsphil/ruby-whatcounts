@@ -1,0 +1,50 @@
+== Simple email sending via WhatCounts HTTP API
+
+This library allows you to send a message using the WhatCounts HTTP API. It uses the One-Off-Message 'send' method.
+
+You need to have the proper credentials setup with WhatCounts, including an API key.
+
+This library allows you to send data to the templates - first_name, last_name, etc. The template must be setup correctly on the WhatCounts
+side to accept this data.
+
+
+== Testing with curl
+
+You may need to test your API key and parameters before using this library. The following curl command will do just that.
+Make sure to substitute the correct values in place of the ?s
+
+curl -vk -d pwd=? -d list_id=? -d cmd=send -d realm=? -d format=1 -d to=test@somewhere.com -d template_id=? -d data=first^Name https://secure.whatcounts.com/bin/api_web
+
+
+== Using the library
+
+The following parameters are needed by this library:
+
+pwd=?
+list_id=?
+realm=?
+format=1
+to=?
+template_id=?
+data=?
+
+You can send a message using the following code:
+
+  msg = API::WhatCounts::OneOffMessage.new(
+    :pwd => 'your_api_key', 
+    :list_id => ?, 
+    :realm => 'your_realm', 
+    :format => 1, 
+    :to => 'test@somewhere.com', 
+    :template_id => ?, 
+    :data => {:first => 'Test'}
+  )
+  
+  msg.send
+  => true
+  
+Note that you will need a valid list_id, realm, email address, and template_id
+
+== Testing
+
+To run the rspec tests, make sure you are in the what_counts directory and type 'spec -cfs spec/' - these tests do not hit the API directly, they use fixtures.
