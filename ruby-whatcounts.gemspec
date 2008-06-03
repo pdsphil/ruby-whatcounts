@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.email = "pdsphil@gmail.com"
   s.homepage = "http://github.com/pdsphil/ruby-whatcounts"
   s.description = "This library allows you to send a message using the WhatCounts HTTP API. It uses the One-Off-Message 'send' method."
-  s.authors = ["Phil Ripperger"]
+  s.authors = ["Phil Ripperger, Kevin Weller"]
   s.platform = Gem::Platform::RUBY
   
   candidates = Dir.glob("{lib}/**/*")
