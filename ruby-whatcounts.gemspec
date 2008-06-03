@@ -9,8 +9,9 @@ Gem::Specification.new do |s|
   s.authors = ["Phil Ripperger, Kevin Weller"]
   s.platform = Gem::Platform::RUBY
   
-  candidates = Dir.glob("{lib}/**/*")
-  s.files = candidates.delete_if { |item| item.include?(".log") || item.include?("rdoc") }
+  # output from - Dir.glob("{lib}/**/*")
+  # github does not like the Dir.glob command, just paste results from running locally here
+  s.files = ["lib/what_counts", "lib/what_counts/api.rb", "lib/what_counts/api_request.rb", "lib/what_counts/api_response.rb", "lib/what_counts/base.rb", "lib/what_counts/certs", "lib/what_counts/certs/cacert.pem", "lib/what_counts/log", "lib/what_counts/spec", "lib/what_counts/spec/api_request_spec.rb", "lib/what_counts/spec/api_response_spec.rb", "lib/what_counts/spec/base_spec.rb", "lib/what_counts/spec/spec_helper.rb", "lib/what_counts.rb"]
   
   s.has_rdoc = true
   s.extra_rdoc_files = ["README"]
