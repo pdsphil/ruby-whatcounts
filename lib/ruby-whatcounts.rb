@@ -20,7 +20,7 @@
 
 $:.unshift(File.dirname(__FILE__))
 
-require 'what_counts/api'
-require 'what_counts/base'
-require 'what_counts/api_request'
-require 'what_counts/api_response'
+require 'whatcounts/api'
+require 'whatcounts/base'
+require 'whatcounts/api_request'
+require 'whatcounts/api_response'

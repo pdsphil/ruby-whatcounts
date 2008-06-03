@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'spec'
 
-require File.dirname(__FILE__) + "/../../what_counts"
+require File.dirname(__FILE__) + "/../../ruby-whatcounts"
 
 module ResponseSpecHelper
   

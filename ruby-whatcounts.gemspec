@@ -11,13 +11,13 @@ Gem::Specification.new do |s|
   
   # output from - Dir.glob("{lib}/**/*")
   # github does not like the Dir.glob command, just paste results from running locally here
-  s.files = ["lib/what_counts", "lib/what_counts/api.rb", "lib/what_counts/api_request.rb", "lib/what_counts/api_response.rb", "lib/what_counts/base.rb", "lib/what_counts/certs", "lib/what_counts/certs/cacert.pem", "lib/what_counts/log", "lib/what_counts/spec", "lib/what_counts/spec/api_request_spec.rb", "lib/what_counts/spec/api_response_spec.rb", "lib/what_counts/spec/base_spec.rb", "lib/what_counts/spec/spec_helper.rb", "lib/what_counts.rb"]
+  s.files = ["lib/ruby-whatcounts.rb", "lib/whatcounts", "lib/whatcounts/api.rb", "lib/whatcounts/api_request.rb", "lib/whatcounts/api_response.rb", "lib/whatcounts/base.rb", "lib/whatcounts/certs", "lib/whatcounts/certs/cacert.pem", "lib/whatcounts/log", "lib/whatcounts/log/error.log", "lib/whatcounts/spec", "lib/whatcounts/spec/api_request_spec.rb", "lib/whatcounts/spec/api_response_spec.rb", "lib/whatcounts/spec/base_spec.rb", "lib/whatcounts/spec/spec_helper.rb"]
   
   s.has_rdoc = true
   s.extra_rdoc_files = ["README"]
   
   s.require_path = "lib"
-  s.autorequire = "what_counts"
+  s.autorequire = "ruby-whatcounts"
   
 #  s.add_dependency("mime-types", ["> 0.0.0"])
 end
